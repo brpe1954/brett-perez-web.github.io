@@ -1,0 +1,80 @@
+/* General page styles */
+
+body {
+    margin: 0;
+}
+  
+html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+}
+
+#personal {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2, p {
+    margin: 0;
+}  
+
+/* Card container styles */
+
+.card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red;
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+}
+
+#personal {
+    background-color: blue;
+}
+
+.card article {
+    height: 12em;
+}
+
+.card article p {
+    padding: 1em;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 10em;
+  }
+
+/* Header and footer styles */
+
+.card header, .card footer {
+  height: 3em;
+  padding: 1em;
+}
+
+.card header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+}
+  
+.card footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em;
+}
+
+.card header h2 {
+    font-size: 2em; /* 20px / 10px = 2em */
+    height: 0.5em; /* (30px - 20px) / 2 / 10px = 0.5em */
+}
+
+.card footer p {
+    font-size: 1.5em; /* 15px / 10px = 1.5em */
+    height: 0.5em; 
+}  
+
+/* Business card styles */
+
+.card article img {
+    height: 12em; /* 120px / 10px = 12em */
+    max-height: 100%;
+    float: right;
+}
