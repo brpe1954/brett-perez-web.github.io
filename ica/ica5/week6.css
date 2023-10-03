@@ -1,3 +1,24 @@
-body {
-    background-color: blue;
+html {
+    font-size: 50px;
 }
+
+.box {
+    border: 2px dashed red;
+}
+
+.text {
+    /* border: 1vw dashed blue; */
+    /* border: 1rem dashed blue; */
+    border: 1vw dashed blue;
+    /* padding: 20px 30px; */ /* <top-bottom px> <left-right px> */
+    /* padding: 20px 30px 10px 50px; */ /* <top px> <right px> <bottom px> <left px> */   
+    padding: 5vw;
+    /* padding: 10 rem; */
+    background: lightblue;
+    /* margin: 25%; */
+    margin: 5vw;
+}
+
+/* ems and rems */
+/* view width and height */
+/* percentages */ 
