@@ -1,0 +1,59 @@
+p {
+    color:black;
+    font-size: 2vw;
+}
+
+.delay {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes slidein {
+    /* this means starting at point zero */
+    from { 
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    /* do something 50% through the animation */
+    50% {
+        color: greenyellow;
+        font-size: 20vw;
+    }
+
+    /* this means finishing at 100% */
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+.getbig {
+    animation: 3s infinite alternate getbig;
+}
+
+@keyframes getbig {
+    from {
+        font-size: 1vw;
+        color: red;
+    }
+
+    to {
+        font-size: 100vw;
+        color: blue;
+    }
+}
+
+/* This is how nav bars can be developed! */
+#hover {
+    font-size: 5vw;
+    transition-property: font-size;
+    transition-duration: 1s;
+    transition-delay: 0.25s;
+}
+
+#hover:hover {
+    font-size: 15vw;
+}
