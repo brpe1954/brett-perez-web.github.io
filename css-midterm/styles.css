@@ -77,7 +77,7 @@ p {
 */
 
 /* For screens wider than 400px */
-@media (min-width: 400px) {
+@media (min-width: 401px) {
     .grid-container {
        grid-template-columns: repeat(2, 1fr);
     }
