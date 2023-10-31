@@ -18,6 +18,14 @@ p {
     margin-top: 0;
 }
 
+.header-section {
+    position: relative;
+}
+
+.grid-container {
+    display: grid;
+}
+
 .concert-name {
     color: #00bcd4;
     font-size: large;
@@ -36,48 +44,24 @@ p {
 }
 
 .artist-role {
-    color: #1B1819;
+    color: black;
     font-style: italic;
 }
 
 .repertoire {
     font-style: italic;
 }
-
-/*
-@media (min-width: 1500px) {
-    body {
+ 
+@media (min-width: 401px) {
+    .grid-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 }
  
- @media (min-width: 400px) and (max-width: 1499px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
- 
- @media (max-width: 399px) {
-    body {
-        display: grid;
-        grid-template-columns: 100%;
-    }
-}
-*/
- 
- @media (min-width: 400px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
- 
- @media (max-width: 399px) {
-    body {
+@media (max-width: 400px) {
+    .grid-container {
         display: grid;
         grid-template-columns: 100%;
     }
