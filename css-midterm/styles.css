@@ -9,7 +9,7 @@ section {
     border: 2px solid black;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -24,11 +24,6 @@ p {
     position: relative;
 }
 
-/*
-.grid-container {
-    display: grid;
-}
-*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -60,23 +55,6 @@ p {
 .repertoire {
     font-style: italic;
 }
- 
-/*
-@media (min-width: 401px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-}
- 
-@media (max-width: 400px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 100%;
-    }
-}
-*/
 
 /* For screens wider than 400px */
 @media (min-width: 401px) {
@@ -85,7 +63,7 @@ p {
     }
   }
   
-/* For screens less than or equal to 400px */
+/* For screens less than 400px */
 @media (max-width: 400px) {
     .grid-container {
        grid-template-columns: 1fr;
