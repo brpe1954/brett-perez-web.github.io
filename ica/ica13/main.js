@@ -19,7 +19,7 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-// Ball class definition featured on our page
+// Ball class definition
 
 class Ball {
 
@@ -32,6 +32,7 @@ class Ball {
     this.size = size;
   }
 
+  // function to command our browser to draw a ball on the webpage
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
@@ -39,9 +40,12 @@ class Ball {
     ctx.fill();
   }
   
+  // function to add movement to the balls
   update() {
+
+    // first 4 if statements check to see if a ball has reached the edge of the webpage
     if ((this.x + this.size) >= width) {
-      this.velX = -(this.velX);
+      this.velX = -(this.velX); // if it has reached an edge, reverse the direction of the movement
     }
   
     if ((this.x - this.size) <= 0) {
@@ -55,11 +59,12 @@ class Ball {
     if ((this.y - this.size) <= 0) {
       this.velY = -(this.velY);
     }
-  
+    
     this.x += this.velX;
     this.y += this.velY;
   }
 
+  // randomly update the color of a ball when a collision is detected
   collisionDetect() {
     for (const ball of balls) {
       if (this !== ball) {
@@ -76,8 +81,10 @@ class Ball {
   
 }
 
+// create an array of 25 balls to add to the webpage
 const balls = [];
 
+// while loop defines how many balls to add
 while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
@@ -94,8 +101,9 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
+// animation loop
 function loop() {
-  ctx.fillStyle = "rgb(0 0 0 / 25%)";
+  ctx.fillStyle = "rgb(0 0 0 / 25%)"; // a semi-transparent fill allows shows the previous few animation frames to show--producing a trail effect
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
