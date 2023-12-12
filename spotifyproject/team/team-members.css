@@ -41,9 +41,10 @@ iframe {
 }
 
 .flex-container img {
-    width: 20%;
-    margin: 12px;
-    border-radius: 12px;
+    width: 100%; /* Set the width of the image */
+    height: 400px; /* Set the height of the image */
+    object-fit: cover; /* This will ensure that the image covers the entire width and height of its container while maintaining its aspect ratio */
+    border-radius: 50%;
 }
  
 .grid-container {

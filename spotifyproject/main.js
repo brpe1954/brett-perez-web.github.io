@@ -81,11 +81,11 @@ class Ball {
   
 }
 
-// create an array of balls to add to the webpage
+// create an array of 25 balls to add to the webpage
 const balls = [];
 
 // while loop defines how many balls to add
-while (balls.length < 20) {
+while (balls.length < 10) {
   const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width

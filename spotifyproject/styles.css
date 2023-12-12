@@ -38,10 +38,11 @@ h3 {
 }
 
 .team-member img {
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Set the width of the image */
+    height: 400px; /* Set the height of the image */
+    object-fit: cover; /* This will ensure that the image covers the entire width and height of its container while maintaining its aspect ratio */
     border-radius: 50%;
-    transition: transform 0.3s ease-in-out; /* Add transition property */
+    transition: transform 0.3s ease-in-out;
 }
 
 .team-member img:hover {
