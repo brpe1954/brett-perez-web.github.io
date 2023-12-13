@@ -50,6 +50,10 @@ summary {
     margin-bottom: 20px;
 }
 
+a {
+    color: lightgreen;
+}
+
 .team-member {
     display: flex;
     flex-direction: column;

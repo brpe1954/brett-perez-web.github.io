@@ -53,36 +53,51 @@
         <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
         <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."</p>
 
-        
         <details>
-            <summary>Step 1 - Collecting Track IDs</summary>
+            <summary>Step 1 - Request Your Spotify Data</summary>
+            <a href="https://www.spotify.com/us/account/privacy/?_ga=2.163377147.674901859.1702433614-1529762974.1701811650" target="_blank">
+                <p>Head to your Spotify account privacy settings</p>
+            </a>
+            <p>Scroll down and request your account data. Spotify will then email you JSON file(s) that contain every song you have streamed over the past 12 months.</p>
+            <img src="./img/download-your-data.png" alt="spotify privacy settings">            
+        </details>
+
+        <details>
+            <summary>Step 2 - Request A Spotify Developer API Key</summary>
+            <a href="https://developer.spotify.com" target="_blank">
+                <p>Next head over to Spotify for Developers</p>
+            </a>
+            <p>Go to your account dashboard and click "Create app" your app will be granted a Client ID and a Client Secret which acts as your API key. Treat this information as a sensitive password!</p>
+            <img src="./img/spotify-for-developers.png" alt="spotify for developers" width="1200px">
+        </details>
+
+        <details>
+            <summary>Step 3 - Collecting Track IDs</summary>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/94c8c5dff91ec13edfb5ba6ce4e3f091.js"></script>
             </div>
         </details>
         
-
         <details>
-            <summary>Step 2 - Gathering Audio Features</summary>
+            <summary>Step 4 - Gathering Audio Features</summary>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/61da7868e670036e59f2a1a858ba4577.js"></script>
             </div>
         </details>
         
         <details>
-            <summary>Step 3 - Getting Recommendations</summary>
+            <summary>Step 5 - Getting Recommendations</summary>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/db9fb8de8249f57748e96f4a10692253.js"></script>
             </div>
         </details>
         
         <details>
-            <summary>Step 4 - Create Playlists</summary>
+            <summary>Step 6 - Create Playlists</summary>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/3cac67e1ee88f52f269b93370a317e3f.js"></script>
             </div>
-        </details>
-        
+        </details> 
     </div>
 
     <script src="main.js"></script>
