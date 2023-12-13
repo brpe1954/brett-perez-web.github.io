@@ -12,15 +12,31 @@ body {
 .box {
     border-radius: 12px;
     background-color: #181818;
-    margin-bottom: 50px;
+    padding: 20px;
+    margin-bottom: 60px;
+
 }
- 
+
+canvas {
+    background-color: #121212;
+}
+
 h1 {
-    color: #1db954;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    color: transparent;
+    text-shadow: 0 0 4px white;
 }
 
 h2 {
-    color: #1db954
+    color: #1db954;
+    text-align: center;
 }
 
 h3 {
@@ -53,4 +69,5 @@ h3 {
     display: flex;
     justify-content: space-around;
     max-width: 100%;
+    margin-bottom: 60px;
 }

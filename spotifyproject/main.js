@@ -16,9 +16,10 @@ function random(min, max) {
 // function to generate random color
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  const green = Math.floor(Math.random() * 256);
+  return `rgb(${0},${green},${0})`;
 }
-
+ 
 // Ball class definition
 
 class Ball {
@@ -81,11 +82,11 @@ class Ball {
   
 }
 
-// create an array of 25 balls to add to the webpage
+// create an array of balls to add to the webpage
 const balls = [];
 
 // while loop defines how many balls to add
-while (balls.length < 10) {
+while (balls.length < 25) {
   const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width
@@ -105,6 +106,17 @@ while (balls.length < 10) {
 function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)"; // a semi-transparent fill allows shows the previous few animation frames to show--producing a trail effect
   ctx.fillRect(0, 0, width, height);
+
+  // Set text properties
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.font = '2rem Arial';
+  ctx.fillStyle = 'transparent';
+  ctx.strokeStyle = 'white';
+  ctx.lineWidth = 4;
+  ctx.textShadow = '0 0 4px white';
+  ctx.strokeText('SPOTIFY DATA PROJECT', width / 2, height / 2);
+  ctx.fillText('SPOTIFY DATA PROJECT', width / 2, height / 2);
 
   for (const ball of balls) {
     ball.draw();
