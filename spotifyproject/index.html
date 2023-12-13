@@ -14,7 +14,7 @@
         <p>For this project we were trying to answer the question “How does our music taste change throughout the seasons?”.  To answer this question we wanted to look at all of our Spotify data over the past year and break it up into the different seasons. Our goal was to analyze this data using tools given to us through Spotify to understand the kind of music we listened to. We used variables such as valence, energy, and danceability to get an understanding of the type of music we listened to in the past year and used them to compare each individual season. After analyzing our data we were able to create a playlist of recommended songs for each season based off of the variables above. In this website you will be able to take a deeper look into each playlist, how we created them, and our overall findings from the project.</p>
     </div>
     
-    <h2>Meet The Team</h2>
+    <h2>Meet The Team <br>(click on our pictures to see our playlists!)</h2>
     <div class="team-container">
         <div class="team-member">
             <a href="./team/brett.html" target="_blank">
@@ -73,6 +73,8 @@
 
         <details>
             <summary>Step 3 - Collecting Track IDs</summary>
+            <p>In this step we will use pandas to read the JSON file that spotify sent us and transform it into a dataframe. However, we are missing one crucial component: the track id associated with each song. Spotify assigns a unique id to every track on their platform. Below is a code snippet that demonstrates how to use Spotify's Web API to generate a list of track ids associated with each song in our dataframe. You can then append that list as a new column to your streaming history.</p>
+            <img src="./img/step-3.png" alt="step 3" width="1350px">
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/94c8c5dff91ec13edfb5ba6ce4e3f091.js"></script>
             </div>
@@ -80,6 +82,18 @@
         
         <details>
             <summary>Step 4 - Gathering Audio Features</summary>
+            <p>The track ids that we collected in step 3 will now be used to make additional API calls which gather several data variables associated with each song. Spotify's Web API will handle audio feature requests for 100 songs at a time. Below is a code snippet for splitting a dataframe into chunks of 100 that we will use to make our requests.</p>
+            <p><em>Variable explanations</em></p>
+            <p><em>Acousticness</em> - A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.</p>
+            <p><em>Danceability</em> - Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p>
+            <p><em>Energy</em> - Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</p>
+            <p><em>Instrumentalness</em> - Predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly "vocal". The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.</p>
+            <p><em>Liveness</em> - Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.</p>
+            <p><em>Loudness</em> - The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typically range between -60 and 0 db.</p>
+            <p><em>Speechiness</em> - Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks.</p>
+            <p><em>Tempo</em> - The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</p>
+            <p><em>Valence</em> - A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
+            <img src="./img/step-4.png" alt="step 4" width="1350px">
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/61da7868e670036e59f2a1a858ba4577.js"></script>
             </div>
@@ -87,6 +101,7 @@
         
         <details>
             <summary>Step 5 - Getting Recommendations</summary>
+            <p>Now, we have a lot of additional data to describe our streaming history. We can use information such as our top five artists and the min/max/average of each variable from step 4 to generate song recommendations using Spotify's Web API. In the snippet below, Spotify will recommend 50 songs based on our listening habits.</p>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/db9fb8de8249f57748e96f4a10692253.js"></script>
             </div>
@@ -94,6 +109,7 @@
         
         <details>
             <summary>Step 6 - Create Playlists</summary>
+            <p>Using the recommendations from step 5, we can now create a Spotify playlist that will appear in your library next time you open the app!</p>
             <div class="gist-container">
                 <script src="https://gist.github.com/brpe1954/3cac67e1ee88f52f269b93370a317e3f.js"></script>
             </div>
